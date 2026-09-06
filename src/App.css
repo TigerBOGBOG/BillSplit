@@ -1,0 +1,671 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background: #f8f8f5;
+  color: #292929;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.app {
+  width: min(92%, 620px);
+  margin: 60px auto;
+  padding-bottom: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: pageEnter 0.5s ease;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  border-radius: 16px;
+
+  font-size: 26px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.06);
+
+  animation: float 3s ease-in-out infinite;
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.header p {
+  margin: 2px 0 0;
+
+  color: #999;
+  font-size: 14px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 24px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.055);
+
+  border: 1px solid #f0f0ed;
+
+  animation: cardEnter 0.45s ease both;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title,
+.result-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 22px;
+}
+
+.section-title > span {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff5dc;
+  border-radius: 13px;
+
+  font-size: 20px;
+}
+
+.section-title h2,
+.people-header h2,
+.result-title h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.section-title p,
+.result-title p {
+  margin: 2px 0 0;
+
+  color: #aaa;
+  font-size: 13px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.input-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+}
+
+input {
+  width: 100%;
+
+  border: 1.5px solid #ededeb;
+  background: #fafaf8;
+
+  border-radius: 12px;
+
+  padding: 12px 14px;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+input:focus {
+  border-color: #bdbdb8;
+  background: white;
+
+  box-shadow:
+    0 0 0 4px rgba(0, 0, 0, 0.035);
+}
+
+input::placeholder {
+  color: #c7c7c4;
+}
+
+
+/* =========================
+   MONEY
+========================= */
+
+.money-input {
+  position: relative;
+}
+
+.money-input input {
+  padding-right: 55px;
+}
+
+.money-input span {
+  position: absolute;
+
+  right: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #aaa;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+
+/* Add */
+
+.add-btn {
+  margin-top: 3px;
+
+  padding: 13px;
+
+  border-radius: 13px;
+
+  background: #292929;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.add-btn:hover {
+  background: #3b3b3b;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.add-btn:active {
+  transform: scale(0.97);
+}
+
+.add-btn span {
+  margin-right: 5px;
+}
+
+
+/* =========================
+   PEOPLE
+========================= */
+
+.people-card {
+  animation-delay: 0.05s;
+}
+
+.people-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.people-header p {
+  margin: 2px 0 0;
+
+  color: #aaa;
+  font-size: 13px;
+}
+
+.people-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f6ff;
+
+  border-radius: 12px;
+}
+
+
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+
+/* Person */
+
+.person {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px;
+
+  border-radius: 15px;
+
+  background: #fafaf8;
+
+  animation: personEnter 0.35s ease both;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.person:hover {
+  background: #f5f5f2;
+  transform: translateX(3px);
+}
+
+
+/* Avatar */
+
+.avatar {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #ecece8;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+
+/* Info */
+
+.person-info {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.person-info strong {
+  font-size: 14px;
+}
+
+.person-info span {
+  font-size: 12px;
+  color: #999;
+}
+
+
+/* Delete */
+
+.delete-btn {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #bbb;
+
+  font-size: 21px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #ffecec;
+  color: #e66;
+
+  transform: rotate(8deg);
+}
+
+
+/* =========================
+   CALCULATE
+========================= */
+
+.calculate-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  margin: 2px 0 18px;
+
+  border-radius: 15px;
+
+  background: #292929;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.1);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.calculate-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.calculate-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.calculate-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.calculate-btn span {
+  margin-right: 7px;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result-card {
+  animation:
+    resultEnter 0.45s cubic-bezier(.2,.8,.2,1);
+}
+
+.success-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #e9f8ed;
+
+  color: #55a96b;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  animation: pop 0.4s ease;
+}
+
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  background: #fafaf8;
+
+  animation: transactionEnter 0.35s ease both;
+}
+
+.transaction-person {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 13px;
+}
+
+.from {
+  font-weight: 700;
+}
+
+.to {
+  font-weight: 700;
+}
+
+.arrow {
+  color: #bbb;
+}
+
+.transaction strong {
+  font-size: 14px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes personEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes transactionEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes resultEnter {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .app {
+    width: 92%;
+    margin: 30px auto;
+  }
+
+  .header h1 {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .transaction {
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+}
