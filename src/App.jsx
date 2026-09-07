@@ -220,8 +220,7 @@ function App() {
         onClick={calculate}
         disabled={people.length === 0}
       >
-        <span>🧮</span>
-        คำนวณค่าอาหาร
+        Calculate
       </button>
 
 
