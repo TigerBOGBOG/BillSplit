@@ -175,8 +175,6 @@ function App() {
               </div>
               <p>{people.length} คน</p>
             </div>
-
-            <span className="people-icon">👥</span>
           </div>
 
 
@@ -187,7 +185,6 @@ function App() {
                 className="person"
                 key={index}
               >
-              <span className="people-icon"></span>
                 
 
                 <div className="person-info">
